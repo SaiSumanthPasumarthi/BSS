@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<definition name="base.definition" template="/WEB-INF/views/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/Header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/Footer.jsp" />
+	</definition>
+	<definition name="ViewTTList" extends="base.definition">
+		<put-attribute name="title" value="Pending Trouble Tickets" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/ViewTTList.jsp" />
+	</definition>
+	<definition name="ViewTTListSelection" extends="base.definition">
+		<put-attribute name="title" value="Pending Trouble Tickets" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/ViewTTListSelection.jsp" />
+	</definition>
+	<definition name="UpdatettScreen" extends="base.definition">
+		<put-attribute name="title" value="Update Trouble Tickets" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/UpdatettScreen.jsp" />
+	</definition>
+
+	<definition name="tt.createTT" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create TT" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/createTT.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="tt.createTroubleTicket" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create TT" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/createTroubleTicket.jsp"></put-attribute>
+	</definition>
+	
+	
+	<definition name="tt.viewTT" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/viewTT.jsp" />
+	</definition>
+	
+	<definition name="tt.updateTT" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/updateTT.jsp" />
+	</definition>
+	
+	<definition name="tt.searchLMORMSP" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/searchLMORMSP.jsp"/>
+	</definition>
+	
+	
+	<definition name="tt.searchCustomer" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/searchCustomer.jsp"/>
+	</definition>
+	
+	<definition name="tt.ttSuccess" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/ttSuccess.jsp"/>
+	</definition>
+	
+	<definition name="tt.ttFailed" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/ttFailure.jsp"/>
+	</definition>
+		
+	<definition name="tt.slaReport" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/slaReport.jsp" />
+	</definition>
+	
+	<definition name="tt.lmoSLAReport" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/lmoSLAReport.jsp" />
+	</definition>
+	
+	<definition name="tt.lmoTroubleTickets" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/lmoTroubleTickets.jsp" />
+	</definition>
+	
+	<definition name="tt.updateTroubleTicket" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/tt/updateTroubleTicket.jsp" />
+	</definition>
+	
+<!-- 	<definition name="em.meErrorProcess" extends="base.definition">
+		<put-attribute name="title" value="APSFL ME Error Process" />
+		<put-attribute name="body" value="/WEB-INF/views/em/mediationUsageErrors.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="em.mnpErrorProcess" extends="base.definition">
+		<put-attribute name="title" value="APSFL MNP Error Process" />
+		<put-attribute name="body" value="/WEB-INF/views/em/mnpErrorMangement.jsp"></put-attribute>
+	</definition> -->
+</tiles-definitions>

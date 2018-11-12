@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/views/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/Header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/Footer.jsp" />
+	</definition>
+
+	<definition name="ums.login" template="/WEB-INF/views/ums/login.jsp" />
+
+	<definition name="ums.forgotPassword" template="/WEB-INF/views/ums/forgotPassword.jsp" />
+
+	<!-- <definition name="ums.forgotPassword" extends="base.definition"> <put-attribute 
+		name="title" value="APSFL Forgot Password" /> <put-attribute name="body" 
+		value="/WEB-INF/views/ums/forgotPassword.jsp"></put-attribute> </definition> -->
+
+	<definition name="ums.home" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/ums/home.jsp" />
+	</definition>
+
+	<!-- <definition name="userCreation" extends="base.definition"> <put-attribute 
+		name="title" value="APSFL Home" /> <put-attribute name="body" value="/WEB-INF/views/userCreation.jsp" 
+		/> </definition> -->
+
+
+	<definition name="ums.roleCreation" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create Role" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/ums/roleCreation.jsp"></put-attribute>
+	</definition>
+
+	<definition name="ums.changePassword" extends="base.definition">
+		<put-attribute name="title" value="APSFL Change Password" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/ums/changePassword.jsp"></put-attribute>
+	</definition>
+
+	<definition name="ums.userCreation" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create User" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/ums/userCreation.jsp"></put-attribute>
+	</definition>
+
+	<definition name="ums.roleServiceMapping" extends="base.definition">
+		<put-attribute name="title" value="APSFL Role Mapping" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/ums/roleServiceMapping.jsp"></put-attribute>
+	</definition>
+
+	<definition name="rpt.ActiveAndDeActiveSubscibersCount"
+		extends="base.definition">
+		<put-attribute name="title" value="APSFL SMS Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/reports.jsp"></put-attribute>
+	</definition>
+
+	<definition name="rpt.TransactionLog" extends="base.definition">
+		<put-attribute name="title" value="APSFL SMS Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/reports.jsp"></put-attribute>
+	</definition>
+
+	<definition name="msoList" extends="base.definition">
+		<put-attribute name="title" value="APSFL SMS Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/msolist.jsp"></put-attribute>
+	</definition>
+	<definition name="lmoList" extends="base.definition">
+		<put-attribute name="title" value="APSFL SMS Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/lmodetails.jsp"></put-attribute>
+	</definition>
+
+	<definition name="msoWiseDemand" extends="base.definition">
+		<put-attribute name="title" value="MSO WISE Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/msoWiseDemand.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="districtWiseDemand" extends="base.definition">
+		<put-attribute name="title" value="District Wise CPE Request Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/districtWiseDemand.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="cafReport" extends="base.definition">
+		<put-attribute name="title" value="CAF Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/cafReport.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="aaaUsageReport" extends="base.definition">
+		<put-attribute name="title" value="HSI Session Wise Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/aaaUsageReport.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="aaaUsageReportByHours" extends="base.definition">
+		<put-attribute name="title" value="AAA Usage Report By Hours" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/aaaUsageReportByHours.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="aaaUsagePerMonth" extends="base.definition">
+		<put-attribute name="title" value="HSI Usage report per month" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/aaaUsagePerMonth.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="aaaUsagePerMonthCust" extends="base.definition">
+		<put-attribute name="title" value="HSI Usage report for customer" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/aaaUsagePerMonthCust.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="termCellReport" extends="base.definition">
+		<put-attribute name="title" value="TERM CELL" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/termCellReport.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="ageingReport"	extends="base.definition">
+		<put-attribute name="title" value="APSFL Ageing Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/ageingReport.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="srvcsWiseSubs" extends="base.definition">
+		<put-attribute name="title" value="APSFL Package Wise Subscribers Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/serviceWiseSubs.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="packWiseSubs" extends="base.definition">
+		<put-attribute name="title" value="APSFL Package Wise Subscribers Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/packWiseSubs.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="subsDtls" extends="base.definition">
+		<put-attribute name="title" value="APSFL Package Wise Subscribers Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/subsDtls.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="packWiseChnls" extends="base.definition">
+		<put-attribute name="title" value="APSFL Package Wise Channels Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/packWiseChnls.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="transactionLog" extends="base.definition">
+		<put-attribute name="title" value="APSFL TransactionLog Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/transactionLog.jsp"></put-attribute>
+	</definition>
+		
+	<definition name="cpeOrder" extends="base.definition">
+		<put-attribute name="title" value="APSFL CpeOrder Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/cpeOrder.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="totalNoOfSubs" extends="base.definition">
+		<put-attribute name="title" value="APSFL Total No Of Subscribers Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/totalNoOfSubs.jsp"></put-attribute>
+	</definition>	
+	
+	<definition name="statusWiseSubs" extends="base.definition">
+		<put-attribute name="title" value="APSFL Status Wise Subscirbers Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/statusWiseSubs.jsp"></put-attribute>
+	</definition>	
+	
+	<definition name="chnlsOnAlacarte" extends="base.definition">
+		<put-attribute name="title" value="APSFL Channels on AlaCarte Basis Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/chnlsOnAlacarte.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="customerActivityLog" extends="base.definition">
+		<put-attribute name="title" value="APSFL Customer Activity Log Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/customerActivityLog.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="entSubscriberReport" extends="base.definition">
+		<put-attribute name="title" value="Enterprise Customer Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/entSubscriberReport.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="customerPaymentDtls" extends="base.definition">
+		<put-attribute name="title" value="APSFL Customer Payment Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/customerPaymentDtls.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="ponWiseReport" extends="base.definition">
+		<put-attribute name="title" value="Pon Wise Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/ponWiseReport.jsp"></put-attribute>
+	</definition>
+	<definition name="ponWithNoCafReport" extends="base.definition">
+		<put-attribute name="title" value="Pon With Zero Caf Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/ponWithNoCafReport.jsp"></put-attribute>
+	</definition>
+	<definition name="substationCafReport" extends="base.definition">
+		<put-attribute name="title" value="Substation Wise Caf Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/substationCafReport.jsp"></put-attribute>
+	</definition>
+	<!-- LMO Wise Stock Count -->
+	<definition name="lmoWiseStockCount" extends="base.definition">
+		<put-attribute name="title" value="LMO Wise Stock Count" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/lmoWiseStockCount.jsp"></put-attribute>
+	</definition>
+	<!-- Tenant Wise CPE Stock -->
+	<definition name="tenantWiseCpeStock" extends="base.definition">
+		<put-attribute name="title" value="Tenant Stock Report" />
+		<put-attribute name="body" value="/WEB-INF/views/reports/tenantWiseCpeStock.jsp"></put-attribute>
+	</definition>
+	<!-- Mso Wise Lmo reports -->
+	<definition name="msoDetailsWithAlignedLMOs" extends="base.definition">
+		<put-attribute name="title" value="MSO Details With Aligned LMOs Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/msoDetailsWithAlignedLMOs.jsp"></put-attribute>
+	</definition>
+	<!-- Mso Wise Stock Count -->
+	<definition name="msoWiseCpeStock" extends="base.definition">
+		<put-attribute name="title" value="MSO CAF NOT DONE CPE STOCK Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/msoWiseCpeStock.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="lmoRevenueShare" extends="base.definition">
+		<put-attribute name="title" value="Revenue Share" />
+		<put-attribute name="body" value="/WEB-INF/views/ums/lmoRevenueShare.jsp" />
+	</definition>
+	
+</tiles-definitions>

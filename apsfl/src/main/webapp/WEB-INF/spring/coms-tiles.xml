@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/views/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/Header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/Footer.jsp" />
+	</definition>
+
+	<definition name="header" template="/WEB-INF/views/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="footer" value="" />
+	</definition>
+
+	<!-- <definition name="home" template="/WEB-INF/views/home.jsp" /> -->
+
+	<definition name="comsHome" extends="base.definition">
+		<put-attribute name="title" value="APSFL Home" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/home.jsp" />
+	</definition>
+
+	<definition name="createcustomer" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create Order" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/createcustomer.jsp" />
+	</definition>
+
+	<definition name="showcustomer" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create Order" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/showcustomer.jsp" />
+	</definition>
+
+	<definition name="viewcustomer" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create Order" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/viewcustomer.jsp" />
+	</definition>
+
+	<definition name="cafdetails" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create Order" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/cafdetails.jsp" />
+	</definition>
+
+	<definition name="createcustomer" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create Order" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/createcustomer.jsp" />
+	</definition>
+
+	<definition name="createpayment" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create Payment" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/createpayment.jsp" />
+	</definition>
+
+	<definition name="multiaction" extends="base.definition">
+		<put-attribute name="title" value="APSFL Multi Action" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/multiaction.jsp" />
+	</definition>
+
+	<definition name="monthlypayment" extends="base.definition">
+		<put-attribute name="title" value="APSFL Monthly Payment" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/monthlypayment.jsp" />
+	</definition>
+
+	<definition name="approvecaf" extends="base.definition">
+		<put-attribute name="title" value="APSFL Approve Caf" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/approvecaf.jsp" />
+	</definition>
+
+	<definition name="enterprisecustomer" extends="base.definition">
+		<put-attribute name="title" value="APSFL Enterprise Customer" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/enterprisecustomer.jsp" />
+	</definition>
+
+	<definition name="createentcustomer" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create Enterprise Customer" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/createentcustomer.jsp" />
+	</definition>
+
+	<definition name="enterprisecaf" extends="base.definition">
+		<put-attribute name="title"
+			value="APSFL Create Enterprise Caf Creation" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/enterprisecaf.jsp" />
+	</definition>
+
+	<definition name="showenterprisenodes" extends="base.definition">
+		<put-attribute name="title"
+			value="APSFL Create Enterprise Node Creation" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/showenterprisenodes.jsp" />
+	</definition>
+
+	<definition name="createnode" extends="base.definition">
+		<put-attribute name="title"
+			value="APSFL Create Enterprise Node Creation" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/createnode.jsp" />
+	</definition>
+
+	<definition name="viewentcustomer" extends="base.definition">
+		<put-attribute name="title" value="APSFL View Organization" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/viewentcustomer.jsp" />
+	</definition>
+
+	<definition name="viewentcustomernode" extends="base.definition">
+		<put-attribute name="title" value="APSFL View Organization Node" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/viewentcustomernode.jsp" />
+	</definition>
+
+	<definition name="provisonErrors" extends="base.definition">
+		<put-attribute name="title" value="APSFL Provison Errors" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/provisonErrors.jsp" />
+	</definition>
+
+	<definition name="selectpackages" extends="base.definition">
+		<put-attribute name="title" value="APSFL Select Packages" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/selectpackages.jsp" />
+	</definition>
+
+	<definition name="customerModify" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create Order" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/customerModify.jsp" />
+	</definition>
+
+	<definition name="individualCafFPActivation" extends="base.definition">
+		<put-attribute name="title" value="APSFL Individual Caf FP Activation" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/individualCafFPActivation.jsp" />
+	</definition>
+
+	<definition name="groupCafFPActivation" extends="base.definition">
+		<put-attribute name="title" value="APSFL Group Caf FP Activation" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/groupCafFPActivation.jsp" />
+	</definition>
+
+	<definition name="blackListedCustomers" extends="base.definition">
+		<put-attribute name="title" value="View blackListed Customers " />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/blackListedCustomers.jsp" />
+	</definition>
+	
+	<definition name="bulkupload" extends="base.definition">
+		<put-attribute name="title" value="Bulk Upload Caf" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/bulkupload.jsp" />
+	</definition>
+	
+	<definition name="caflmomodify" extends="base.definition">
+		<put-attribute name="title" value="caf lmo modify" />
+		<put-attribute name="body"	value="/WEB-INF/views/coms/caflmomodify.jsp" />
+	</definition>
+	
+	<definition name="vpnServiceUpload" extends="base.definition">
+		<put-attribute name="title" value="vpn Service Upload Page" />
+		<put-attribute name="body"	value="/WEB-INF/views/coms/vpnServiceUpload.jsp" />
+	</definition>
+	
+	<definition name="cafBulkUploadError" extends="base.definition">
+		<put-attribute name="title" value="CAF BulkUpload Error Page" />
+		<put-attribute name="body"	value="/WEB-INF/views/coms/cafBulkUploadError.jsp" />
+	</definition>
+	
+	<definition name="vpnUploadError" extends="base.definition">
+		<put-attribute name="title" value="VPN Upload Error Page" />
+		<put-attribute name="body"	value="/WEB-INF/views/coms/vpnUploadError.jsp" />
+	</definition>
+	
+	<definition name="editCustomer" extends="base.definition">
+		<put-attribute name="title" value="APSFL Create Add Newpackage Payment" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/editCustomer.jsp" />
+	</definition>
+	
+	<definition name="changeStb" extends="base.definition">
+		<put-attribute name="title" value="Change IPTV" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/changeStb.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="changeOnu" extends="base.definition">
+		<put-attribute name="title" value="Change ONU" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/changeOnu.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="termination" extends="base.definition">
+		<put-attribute name="title" value="Termination" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/termination.jsp" />
+	</definition>
+	
+	<definition name="addPackages" extends="base.definition">
+		<put-attribute name="title" value="AddPackages" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/addPackages.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="changepackage" extends="base.definition">
+		<put-attribute name="title" value="AddPackages" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/changePackage.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="viewEntCustDtls" extends="base.definition">
+		<put-attribute name="title" value="View EntCustomer Details" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/viewEntCustDtls.jsp"></put-attribute>
+	</definition>
+ 
+	
+	<definition name="balanceAdjustment" extends="base.definition">
+		<put-attribute name="title" value="Balance Adjustment" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/balanceAdjustment.jsp" />
+	</definition>
+	
+	<definition name="cafinvDetailsByCustInvno" extends="base.definition">
+		<put-attribute name="title" value="cafinv Details ByCustinvNo" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/cafinvDetailsByCustInvno.jsp" />
+	</definition>
+	
+	<definition name="publicIPCheck" extends="base.definition">
+		<put-attribute name="title" value="Public IP Address Check" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/publicIPCheck.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="changeProfileForCPE" extends="base.definition">
+		<put-attribute name="title" value="Change Cpe Profile" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/changeProfileForCPE.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="MonthlyBulkPayment" extends="base.definition">
+		<put-attribute name="title" value="APSFL Monthly Payment" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/MonthlyBulkPayment.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="SecondApproverManager" extends="base.definition">
+		<put-attribute name="title" value="APSFL Second Approver Manager" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/coms/SecondApproverManager.jsp"></put-attribute>
+	</definition>
+	<definition name="pendingProvison" extends="base.definition">
+		<put-attribute name="title" value="Pending Provisions" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/pendingProvison.jsp"></put-attribute>
+	</definition>
+	
+		<definition name="lmosListOfLoggedinMso" extends="base.definition">
+		<put-attribute name="title" value="lmos List Of Loggedin Mso" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/lmosListOfLoggedinMso.jsp" />
+	</definition>
+	
+	<definition name="lmoCafsDetails" extends="base.definition">
+		<put-attribute name="title" value="lmo Cafs Details" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/lmoCafsDetails.jsp" />
+	</definition>
+	
+	<definition name="RevenueShare" extends="base.definition">
+		<put-attribute name="title" value="Revenue Share" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/msoRevenueShare.jsp" />
+	</definition>
+	
+	
+	<definition name="customerWiseRevDetails" extends="base.definition">
+		<put-attribute name="title" value="customer Wise Revenue Details" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/customerWiseRevDetails.jsp" />
+	</definition>
+	
+	<definition name="lMOOfflinePayment" extends="base.definition">
+		<put-attribute name="title" value="lMO Offline Payment" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/LMOOfflinePayment.jsp" />
+	</definition>
+	
+	<definition name="LmoWalletUpdateByChequePayment" extends="base.definition">
+		<put-attribute name="title" value="Lmo Wallet Update By ChequePayment" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/LMOWalletUpdateByChequePayment.jsp" />
+	</definition>
+	
+	
+	<definition name="offlinebulkPayment" extends="base.definition">
+		<put-attribute name="title" value="Offline Bulk Payment" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/offlinebulkPayment.jsp" />
+	</definition>
+	
+	<definition name="assignVillage" extends="base.definition">
+		<put-attribute name="title" value="Assign Villages" />
+		<put-attribute name="body" value="/WEB-INF/views/coms/assignVillage.jsp" />
+	</definition>
+	<!-- Upload Subscribers -->
+	<definition name="uploadSubscribers" extends="base.definition">  
+        <put-attribute name="title" value="Upload Subscribers" />  
+        <put-attribute name="body" value="/WEB-INF/views/coms/uploadSubscribers.jsp" />  
+    </definition>
+	
+	
+	
+</tiles-definitions>

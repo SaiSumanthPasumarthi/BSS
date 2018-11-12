@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+  
+   	<definition name="base.definition" template="/WEB-INF/views/layouts/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/Header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/Footer.jsp" />
+	</definition>
+    
+    <definition name="coreServiceCreation" extends="base.definition">
+       <put-attribute name="body" value="/WEB-INF/views/scs/coreServiceCreation.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="additionalServiceCreation" extends="base.definition">
+       <put-attribute name="body" value="/WEB-INF/views/scs/additionalServiceCreation.jsp"></put-attribute>
+    </definition>
+    
+     <definition name="pcsHome" extends="base.definition">
+       <put-attribute name="body" value="/WEB-INF/views/pcs/display-products.jsp"></put-attribute>
+    </definition>
+    
+      <definition name="pcsCreateProduct" extends="base.definition">
+       <put-attribute name="body" value="/WEB-INF/views/pcs/create-product.jsp"></put-attribute>
+    </definition>
+    
+     <definition name="pcsShowProductInfo" extends="base.definition">
+       <put-attribute name="body" value="/WEB-INF/views/pcs/display-product.jsp"></put-attribute>
+    </definition>
+    
+     <definition name="viewIptvAddlSrvcs" extends="base.definition">
+   	  <put-attribute name="title" value="View Logs" />
+       <put-attribute name="body" value="/WEB-INF/views/scs/viewIptvAddlSrvcs.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="changeProdCharges" extends="base.definition">
+  	  <put-attribute name="title" value="Update Charges" />
+       <put-attribute name="body" value="/WEB-INF/views/pcs/packagePriceChange.jsp"></put-attribute>
+    </definition>
+    
+</tiles-definitions>

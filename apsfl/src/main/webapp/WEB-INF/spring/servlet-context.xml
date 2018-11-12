@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+ <default-servlet-handler/>
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+	
+    <task:annotation-driven/>
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<!-- <resources mapping="/resources/**" location="/resources/" /> -->
+	<resources order="0" mapping="/resources/**"
+		location="/resources/, classpath:/META-INF/web-resources/"
+		cache-period="31556926" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<!-- <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+		<beans:property name="prefix" value="/WEB-INF/views/" /> <beans:property 
+		name="suffix" value=".jsp" /> </beans:bean> -->
+
+	<context:component-scan base-package="com.arbiva.apfgc" />
+
+	<beans:bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<beans:property name="viewClass">
+			<beans:value>org.springframework.web.servlet.view.tiles2.TilesView
+			</beans:value>
+		</beans:property>
+	</beans:bean>
+	<beans:bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<beans:property name="definitions">
+			<beans:list>
+				<beans:value>/WEB-INF/spring/ums-tiles.xml</beans:value>
+				<beans:value>/WEB-INF/spring/cat-tiles.xml</beans:value>
+				<beans:value>/WEB-INF/spring/tms-tiles.xml</beans:value>
+				<beans:value>/WEB-INF/spring/coms-tiles.xml</beans:value>
+				<beans:value>/WEB-INF/spring/tt-tiles.xml</beans:value>
+				<beans:value>/WEB-INF/spring/cc-tiles.xml</beans:value>
+				<beans:value>/WEB-INF/spring/em-tiles.xml</beans:value>
+				<beans:value>/WEB-INF/spring/be-tiles.xml</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+	<!-- <beans:import resource="spring-mail.xml"/> -->
+</beans:beans>

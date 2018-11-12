@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>  
+    <definition name="base.definition" template="/WEB-INF/views/layouts/layout.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/views/Header.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/views/Footer.jsp" />  
+    </definition>
+    
+ 
+  
+    <definition name="lmo" extends="base.definition">  
+        <put-attribute name="title" value="View Tenant" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/lmo1.jsp" />  
+    </definition>
+    
+    <definition name="oltPortAlloc" extends="base.definition">  
+        <put-attribute name="title" value="OLT Port Allocation" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/oltportallocation.jsp" />  
+    </definition>
+    
+    <definition name="tenant"  extends="base.definition">  
+        <put-attribute name="title" value="Tenant Information" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/tenant.jsp" />  
+    </definition>
+    
+    <definition name="tenantdetails"  extends="base.definition">  
+        <put-attribute name="title" value="Tenant Details" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/tenantdetails.jsp" />  
+    </definition>
+    
+    <definition name="tenantapproval"  extends="base.definition">  
+        <put-attribute name="title" value="Tenant Approval Details" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/tenantapproval.jsp" />  
+    </definition>
+    
+    <definition name="lmomspagreementapproval"  extends="base.definition">  
+        <put-attribute name="title" value="LMO Approval Details" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/lmoapproval.jsp" />  
+    </definition>
+    
+    <definition name="tenantagreementdetails"  extends="base.definition">  
+        <put-attribute name="title" value="Tenant Agreement Details" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/home.jsp" />  
+    </definition>
+    
+    <definition name="lmoagreement" extends="base.definition">  
+        <put-attribute name="title" value="APF Agreement" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/lmoagreement.jsp" />  
+    </definition>
+    
+    <definition name="lmoapproval" extends="base.definition">  
+        <put-attribute name="title" value="MSP Agreement" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/lmoapproval.jsp" />  
+    </definition>
+    
+    <definition name="lmomspagreement" extends="base.definition">  
+        <put-attribute name="title" value="APF Agreement" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/lmomspagreement.jsp" />  
+    </definition>
+    
+    <definition name="exception" extends="base.definition">  
+        <put-attribute name="title" value="Error Message" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/exception.jsp" />  
+    </definition>  
+  
+    <definition name="tmsHome" extends="base.definition">  
+        <put-attribute name="title" value="Tenants Home" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/home.jsp" />  
+    </definition> 
+    
+    <definition name="error" extends="base.definition">  
+        <put-attribute name="title" value="Error Message" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/exception.jsp" />  
+    </definition>   
+    
+     <definition name="productAgreement" extends="base.definition">  
+        <put-attribute name="title" value="Package Agreement Creation" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/productAgreement.jsp" />  
+    </definition>
+    
+    <definition name="showRevenueSharing" extends="base.definition">  
+        <put-attribute name="title" value="Revenue Sharing" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/revenuesharing.jsp" />  
+    </definition>
+    
+    <definition name="viewAllPkgAgree" extends="base.definition">  
+        <put-attribute name="title" value="View Package Agreemnt" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/viewAllPkgAgreemnt.jsp" />  
+    </definition>
+    
+     <definition name="cpeorder" extends="base.definition">  
+        <put-attribute name="title" value="Create CPE Order" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/cpeorder.jsp" />  
+    </definition>
+    
+     <definition name="viewCpeorder" extends="base.definition">  
+        <put-attribute name="title" value="View CPE Order" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/cpeorder.jsp" />  
+    </definition>
+    
+    <definition name="allocateCpe" extends="base.definition">  
+        <put-attribute name="title" value="View Package Agreemnt" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/allocateCpe.jsp" />  
+    </definition>
+    
+      <definition name="viewTenantCpe" extends="base.definition">  
+        <put-attribute name="title" value="View Package Agreemnt" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/viewTenantCpe.jsp" />  
+    </definition>
+    
+    <definition name="cpeChargeAgmt" extends="base.definition">  
+        <put-attribute name="title" value="Cpe Charge Agreemnt" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/cpeChargeAgmt.jsp" />  
+    </definition>
+    
+    <definition name="viewCpeChargeAgmt" extends="base.definition">  
+        <put-attribute name="title" value="Cpe Charge Agreemnt" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/viewCpeChargeAgmt.jsp" />  
+    </definition>
+    
+     <definition name="creditCardPayment" extends="base.definition">  
+        <put-attribute name="title" value="Payment" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/creditCardPayment.jsp" />  
+    </definition>
+    
+      <definition name="paymentsuccess" extends="base.definition">  
+        <put-attribute name="title" value="Payment" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/paymentsuccess.jsp" />  
+    </definition>
+    
+      <definition name="paymentfailure" extends="base.definition">  
+        <put-attribute name="title" value="Payment" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/paymentfailure.jsp" />  
+    </definition>
+
+     <definition name="viewmonthlyinvoice" extends="base.definition">  
+        <put-attribute name="title" value="Monthly Invoice" />  
+        <put-attribute name="body" value="/WEB-INF/views/broadcast/viewMonthlyInvoice.jsp" />  
+    </definition>
+    
+     <definition name="createBlockList" extends="base.definition">  
+        <put-attribute name="title" value="View cafDetails to BlockList" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/createBlockList.jsp" />  
+    </definition>
+
+ <definition name="cpeStockUpload" extends="base.definition">  
+        <put-attribute name="title" value="Cpe Stock Upload" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/cpeStockUpload.jsp" />  
+    </definition>
+    
+    <definition name="approveBlackList" extends="base.definition">  
+        <put-attribute name="title" value="Approve BlackList" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/approveBlackList.jsp" />  
+    </definition>
+    
+      <definition name="viewratecard" extends="base.definition">  
+        <put-attribute name="title" value="Broadcaster Details" />  
+        <put-attribute name="body" value="/WEB-INF/views/broadcast/viewRateCard.jsp" />  
+    </definition>
+    
+     <definition name="broadcasterspricedetails" extends="base.definition">  
+        <put-attribute name="title" value="Rate Card Details" />  
+        <put-attribute name="body" value="/WEB-INF/views/broadcast/viewBroadcasterPriceDetails.jsp" />  
+    </definition>
+    
+    <definition name="channeldetails" extends="base.definition">  
+        <put-attribute name="title" value="Channel Details" />  
+        <put-attribute name="body" value="/WEB-INF/views/broadcast/viewChannels.jsp" />  
+    </definition>
+    
+    <definition name="invoicedetails" extends="base.definition">  
+        <put-attribute name="title" value="Invoice Details" />  
+        <put-attribute name="body" value="/WEB-INF/views/broadcast/viewInvoiceDetails.jsp" />  
+    </definition>
+    
+    <definition name="portSplitter" extends="base.definition">  
+        <put-attribute name="title" value="Port Splitter" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/portSplitter.jsp" />  
+    </definition>
+    
+     <definition name="lmoCpeRequestPortal" extends="base.definition">  
+        <put-attribute name="title" value="MSO/LMO CPE Request" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/lmoCpeRequestPortal.jsp" />  
+    </definition>
+    
+    <definition name="mspChannelUpload" extends="base.definition">  
+        <put-attribute name="title" value="MSP Channel Upload" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/mspChannelUpload.jsp" />  
+    </definition>
+    
+    
+     <definition name="processRevenueSharing" extends="base.definition">  
+        <put-attribute name="title" value="Process Revenue Sharing" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/processRevenueSharing.jsp" />  
+    </definition>
+    
+    <definition name="distWiseCafReport" extends="base.definition">  
+       <put-attribute name="title" value="district Wise CAF Report" />  
+       <put-attribute name="body" value="/WEB-INF/views/reports/districtWiseCafReport.jsp" />  
+   </definition>
+   
+   
+   <definition name="managerdistWiseCafReport" extends="base.definition">  
+       <put-attribute name="title" value="Manager_district Wise CAF Report" />  
+       <put-attribute name="body" value="/WEB-INF/views/reports/districtManagerCafReport.jsp" />  
+   </definition>
+   
+   <definition name="managerCustomerCafReport" extends="base.definition">  
+       <put-attribute name="title" value="Manager_Customer Wise CAF Report" />  
+       <put-attribute name="body" value="/WEB-INF/views/reports/ManagerCustCafReport.jsp" />  
+   </definition>
+   
+   
+   <definition name="cpeAlloc" extends="base.definition">  
+        <put-attribute name="title" value="CPE Allocation" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/cpeallocation.jsp" />  
+    </definition>
+    
+    <definition name="cpeStockCreateUpdateLogHistory" extends="base.definition">  
+        <put-attribute name="title" value="Log History" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/cpeStockCreateUpdateLogHistory.jsp" />  
+    </definition>
+    
+    <definition name="deletehistory" extends="base.definition">  
+        <put-attribute name="title" value="Delete Log History" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/deletehistory.jsp" />  
+    </definition>
+     <definition name="cpeInformation" extends="base.definition">  
+        <put-attribute name="title" value="CPE Information" />  
+        <put-attribute name="body" value="/WEB-INF/views/reports/cpeInformation.jsp" />  
+    </definition>
+    
+    <definition name="cpeStatusWiseInfo" extends="base.definition">  
+        <put-attribute name="title" value="CPE Status Wise info" />  
+        <put-attribute name="body" value="/WEB-INF/views/reports/cpeStatusWiseInfo.jsp" />  
+    </definition>
+    
+     <definition name="revenueDetails" extends="base.definition">  
+        <put-attribute name="title" value="revenue Sharing" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/revenueDetails.jsp" />  
+    </definition>
+    
+     <definition name="revenueDetailsSummary" extends="base.definition">  
+        <put-attribute name="title" value="revenue Sharing summary" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/revenueDetailsSummary.jsp" />  
+    </definition>
+    
+    
+    <definition name="generateRevDetailsSummary" extends="base.definition">  
+        <put-attribute name="title" value=" generate revenue Sharing summary" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/generateRevDetailsSummary.jsp" />  
+    </definition>
+    
+    <definition name="lmoPaymentDetails" extends="base.definition">  
+        <put-attribute name="title" value="lmoPayment Details"/>  
+        <put-attribute name="body" value="/WEB-INF/views/tms/lmoPaymentDetails.jsp" />  
+    </definition>
+    
+    <definition name="setPaidFlagForOverPaidCustomer" extends="base.definition">  
+        <put-attribute name="title" value="Set Paid Flag for Over Paid Customers"/>  
+        <put-attribute name="body" value="/WEB-INF/views/tms/setPaidFlagForOverPaidCustomer.jsp" />  
+    </definition>
+    
+     <definition name="updateTenantsWalletOnFirst" extends="base.definition">  
+        <put-attribute name="title" value="update Tenants Wallet On First"/>  
+        <put-attribute name="body" value="/WEB-INF/views/tms/updateTenantsWalletOnFirst.jsp" />  
+    </definition>
+    
+     <definition name="updateTenantsWalletOnEndOfMonth" extends="base.definition">  
+        <put-attribute name="title" value="update Tenants Wallet On End Of Month"/>  
+        <put-attribute name="body" value="/WEB-INF/views/tms/updateTenantsWalletOnEndOfMonth.jsp" />  
+        
+    </definition>
+    
+           <definition name="distMandalvillageWiseCafCount" extends="base.definition">  
+       <put-attribute name="title" value="District mandal village Wise Caf Count" />  
+       <put-attribute name="body" value="/WEB-INF/views/reports/DistMandalvillageWiseCafReport.jsp" />  
+   </definition>
+   
+      <definition name="distMandalvillageWiseCafCounttilldate" extends="base.definition">  
+       <put-attribute name="title" value="District mandal village Wise till date Caf Count" />  
+       <put-attribute name="body" value="/WEB-INF/views/reports/DistMandalvillageWiseCafCountTilldate.jsp" />  
+   </definition>
+    
+       <definition name="districtMandalVillageCustomerCafReport" extends="base.definition">  
+       <put-attribute name="title" value="District mandal village Wise Customer Caf report" />  
+       <put-attribute name="body" value="/WEB-INF/views/reports/DistrictMandalVillageCustomerCafReport.jsp" />  
+   </definition>
+   
+  <definition name="districtWisePonWiseCafCountreport" extends="base.definition">
+    <put-attribute name="title" value="district Wise Pon Wise Caf Count report"/>
+    <put-attribute name="body" value="/WEB-INF/views/reports/DistrictWisePonWiseCafCountReport.jsp"/>
+</definition>
+ <definition name="ponChange" extends="base.definition">  
+        <put-attribute name="title" value="Pon Change" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/ponChange.jsp" />  
+    </definition>
+    
+    <definition name="viewModifiedCafs" extends="base.definition">  
+        <put-attribute name="title" value="Pon Changed CAFs" />  
+        <put-attribute name="body" value="/WEB-INF/views/tms/viewModifiedCafs.jsp" />  
+    </definition>
+    
+      <definition name="Oltmatserdatareport" extends="base.definition">
+    <put-attribute name="title" value="OLT matser data report"/>
+    <put-attribute name="body" value="/WEB-INF/views/reports/OLTMasterData.jsp"/>
+</definition>
+
+   <definition name="riggedcafreport" extends="base.definition">
+    <put-attribute name="title" value="Rigged Cafs report"/>
+    <put-attribute name="body" value="/WEB-INF/views/reports/RiggedCafreport.jsp"/>
+</definition>
+
+<!-- Created By SaiSumanth -->
+ <definition name="tms.tenantWalletTrans" extends="base.definition">
+    <put-attribute name="title" value="tenantWalletTrans"/>
+    <put-attribute name="body" value="/WEB-INF/views/tms/tenantWalletTrans.jsp"/>
+</definition> 
+</tiles-definitions>

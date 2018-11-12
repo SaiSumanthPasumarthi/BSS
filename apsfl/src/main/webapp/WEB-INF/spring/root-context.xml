@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd  
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+	        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd 
+	            http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd  
+	             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	             
+
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<context:property-placeholder location="classpath:db.properties"
+		ignore-unresolvable="true" />
+	<context:property-placeholder location="classpath:RestUrl.properties"
+		ignore-unresolvable="true" />
+	<context:property-placeholder location="classpath:config.properties"
+		ignore-unresolvable="true" />
+
+	<context:spring-configured />
+	<context:component-scan base-package="com.arbiva.apsfl" />
+
+	<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${database.driver}" />
+		<property name="jdbcUrl" value="${database.url}" />
+		<property name="user" value="${database.user}" />
+		<property name="password" value="${database.password}" />
+		<property name="minPoolSize" value="5" />
+		<property name="maxPoolSize" value="20" />
+		<property name="acquireIncrement" value="1" />
+		<property name="maxStatements" value="50" />
+		<property name="idleConnectionTestPeriod" value="3000" />
+		<property name="preferredTestQuery" value="SELECT 1" />
+	</bean> -->
+	
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    	<property name="jndiName" value="java:jboss/datasources/mysqlApsflDS"/>
+	</bean>
+
+
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="${database.driver}" /> <property 
+		name="url" value="${database.url}" /> <property name="username" value="${database.user}" 
+		/> <property name="password" value="${database.password}" /> </bean> -->
+		
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="persistenceUnit" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="showSql" value="false" />
+			</bean>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.arbiva.apsfl.tms.model</value>
+				<value>com.arbiva.apfgc.tenant.bo</value>
+			</list>
+		</property>
+
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">none</prop>
+			<!-- 	<prop key="hibernate.jdbc.batch_size">60</prop>
+				<prop key="hibernate.enable_lazy_load_no_trans">true</prop>
+				<prop key="hibernate.connection.characterEncoding">utf8</prop>
+				<prop key="hibernate.connection.characterSetResults">utf8</prop>
+				<prop key="hibernate.connection.useUnicode">true</prop>
+				<prop key="hibernate.connection.charSet">UTF-8</prop> -->
+			</props>
+		</property>
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize">
+			<value>10000000</value>
+		</property>
+	</bean>
+
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.ByteArrayHttpMessageConverter" />
+				<bean class="org.springframework.http.converter.FormHttpMessageConverter" />
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+				<bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="sessionRegistry"
+		class="org.springframework.security.core.session.SessionRegistryImpl" />
+
+</beans>
+
+
